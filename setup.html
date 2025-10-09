@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="img/Coco/Head Logo.webp">
+    <link rel="icon" href="img/Coco/Head Logo Extended.webp">
 
-    <title>Initial Setup | Glory of Cyrodiil</title>
+    <title>User Interface | Glory of Cyrodiil</title>
 
     <meta name="keywords" content="
     Mod, Modding, Mods, Guide, Mod Guide, Modding Guide, Resource, Resources,
@@ -20,10 +20,10 @@
     Fallout New Vegas, Fallout NV, New Vegas, FNV, 
     Fallout 4, FO4,
     Tale of Two Wastelands, TTW,
-    Oblivion, Skyrim SE, SSE,
+    Skyrim Special Edition, Skyrim SE, SSE,
     Oblivion, TES4">
 
-    <meta name="description" content="Clean install and initial launch of the vanilla game.">
+    <meta name="description" content="Improvements to the vanilla user interface without making any drastic stylistic changes.">
     <meta http-equiv='content-language' content='en-us'>
     <meta name="twitter:card" value="summary_large_image">
     <meta property="og:site_name" content="ModdingLinked">
@@ -31,7 +31,7 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://gloryofcyrodiil.moddinglinked.com">
     <meta property="og:image" content="https://gloryofcyrodiil.moddinglinked.com/img/Others/Card.webp">
-    <meta property="og:description" content="Clean install and initial launch of the vanilla game.">
+    <meta property="og:description" content="Improvements to the vanilla user interface without making any drastic stylistic changes.">
 
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#292c35">
     <meta name="darkreader-lock">
@@ -40,7 +40,6 @@
     <meta http-equiv='pragma' content='no-cache'>
     <meta http-equiv='clear-site-data' content='cache'>
 
-    <script src="js/imageViewer.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/javascript.js"></script>
     <script src="js/responsiveTitle.js"></script>
@@ -49,11 +48,13 @@
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/navigationArrows.css">
+    <link rel="stylesheet" href="css/coco.css">
     <link rel="stylesheet" href="css/progressBar.css">
     <link rel="stylesheet" href="css/guideColors.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="css/images.css">
+    <link rel="stylesheet" href="css/textIcons.css">
 </head>
 
 <body class="theme">
@@ -67,14 +68,14 @@
                 <img src="./img/UI/Navigation.svg" id="navButton">
             </div>
             <div class="headerTitle">
-                <img src="./img/Coco/Head Logo.webp" alt="Logo" id="logo">
+                <img src="./img/Coco/Head Logo Extended.webp" alt="Logo" id="logo">
                 <a href="./index.html" id="headerTitle">Glory of Cyrodiil</a>
             </div>
             <div class="guideLinks" id="headerLinks">
                 <a href="https://vivanewvegas.moddinglinked.com" target="_blank" rel="nofollow">Fallout: New Vegas</a>
                 <a href="https://thebestoftimes.moddinglinked.com" target="_blank" rel="nofollow">Tale of Two Wastelands</a>
                 <a href="https://themidnightride.moddinglinked.com" target="_blank" rel="nofollow">Fallout 4</a>
-                <a href="https://dragonbornsfate.moddinglinked.com" target="_blank" rel="nofollow">Oblivion</a>
+                <a href="https://dragonbornsfate.moddinglinked.com" target="_blank" rel="nofollow">Skyrim Special Edition</a>
             </div>
         </div>
 
@@ -181,208 +182,61 @@
 
         <div class="content">
 
-            <span id="Preparation" class="section">
-                <h2 onclick="location.href='#Preparation'">Preparation</h2>
+            <span id="UI" class="section">
+                <h2 onclick="location.href='#UI'">User Interface</h2>
 
-                <div class="card" id="CPPRedists" title="Installing Redistributables">
+                <div class="card">
                     <p>
-                    <h3>Installing VC++ Redistributables</h3>
-                    Most engine mods and tools require latest Visual C++ Redistributables to be installed. We will use an all-in-one package that will install all possible versions.
-                    <div class="card-red">
-                        <p>
-                            Failure to have latest versions installed will result in an immediate crash when launching the game or modding tools.
-                            <br>
-                            <br>
-                            Please install the redistributables even if you have them installed already, as they are often outdated.
-                        </p>
-                    </div>
+                    <h3>Creating a Separator in MO2</h3>
                     <ol>
-                        <li>Download <a href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" target="_blank">VC++ AIO</a> from TechPowerUp.</li>
-                        <li>Extract the archive and run the included <span class="card-basic">install_all.bat</span> as <b>an administrator</b>.</li>
-                        <li>Restart your PC.</li>
+                        <li>Right-click the empty space in the left pane of MO2 and select <strong>Create separator</strong>.</li>
+                        <li>Name the separator <strong>User Interface</strong>.</li>
                     </ol>
                     </p>
                 </div>
 
-                <div class="card" id="FileExtensions" title="Enabling File Extensions">
+                <div class="card" id="SkyUI" title="SkyUI">
                     <p>
-                    <h3>Enabling File Extensions</h3>
-                    Before we start, it is important to enable file extensions in Windows.
-                    </p>
-                    <p>
-                        By default, File Explorer will not show file extensions (such as .exe, .dll, or .esp). These extensions are very important when going through the guide, so it is highly recommended to enable visible file extensions:
-                    <ol>
-                        <li>Open File Explorer.</li>
-                        <li>Select the <b>View</b> tab at the top.</li>
-                        <li>Enable <strong>File name extensions</strong> in the <b>Show</b> section.</li>
-                        <div class="image-container width-90">
-                            <img class="content-img" src="./img/Others/File Extensions.webp" alt="Show file extensions">
-                            <div class="resize-overlay expand"></div>
-                        </div>
-                    </ol>
-                    </p>
-                </div>
-            </span>
-
-            <span id="Installation" class="section">
-                <h2 onclick="location.href='#Installation'">Installation</h2>
-
-                <div class="card" id="InstallLocation">
-                    <p>
-                    <h3>Choosing a Location</h3>
-                    <strong>A clean installation</strong> is not only required to get rid of any potential leftover mod files, but also to make sure the game is installed in a safe location. Here is what you need to know when choosing where to install your game:
-                    <br>
+                    <h3 class="link-download"><a href="https://www.nexusmods.com/skyrimspecialedition/mods/12604" target="_blank">SkyUI</a></h3>
+                    PC-friendly interface mod with many advanced features.
+                    <h3 class="install">Installation instructions</h3>
                     <ul>
+                        <li><b>Main Files</b> - SkyUI_5_2_SE</li>
                         <li>
-                            <b>Avoid any default Windows folders</b>: This includes but is not limited to <span class="card-basic">C:\Program Files</span>, <span class="card-basic">C:\Program Files x86</span>, your <span class="card-basic">Desktop</span> and your <span class="card-basic">Documents</span> folders.
-                            <br>
-                            This is because users lack write access to Program Files, while Desktop and Documents are often managed by OneDrive. This can cause many issues with the game and any modding tools.
-                            <br>
-                            <br>
-                            An example of a safe location is <span class="card-basic">C:\Games</span>
+                            <a href="https://www.nexusmods.com/skyrimspecialedition/mods/32561" target="_blank">Fix Note icon for SkyUI (SKSE64 plugin)</a>
+                            <ul>
+                                <li><b>Main Files</b> - FixNotesForSkyUI Skyrim AE</li>
+                            </ul>
                         </li>
                         <li>
-                            <b>Install on an SSD if possible</b>: Having the game on an SSD will drastically improve loading times and decrease stuttering.
+                            <a href="https://www.nexusmods.com/skyrimspecialedition/mods/49106" target="_blank">SkyUI - Ghost Item Bug Fix</a>
+                            <ul>
+                                <li><b>Main Files</b> - SkyUI - Ghost Item Bug Fix</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://www.nexusmods.com/skyrimspecialedition/mods/53000" target="_blank">MCM Helper</a>
+                            <ul>
+                                <li><b>Main Files</b> - MCM Helper</li>
+                                <ul>
+                                    <li>You will be prompted with a FOMOD installer:
+                                        <ol>
+                                            <li>Next</li>
+                                            <li>Install</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://www.nexusmods.com/skyrimspecialedition/mods/128235" target="_blank">Knotwork</a> - Improves the look of the journal and includes <a href="https://www.nexusmods.com/skyrimspecialedition/mods/20406" target="_blank">SkyUI SE - Flashing Savegames Fix</a>.
+                            <ul>
+                                <li><b>Main Files</b> - Knotwork</li>
+                            </ul>
                         </li>
                     </ul>
                     </p>
                 </div>
-
-                <div class="card" id="Uninstall">
-                    <p>
-                    <h3>Uninstalling the Game</h3>
-
-                    <div class="card-yellow">
-                        <p>
-                            If you never installed the game before, go directly to the next section.
-                        </p>
-                    </div>
-
-                    <div class="card-red">
-                        <p>
-                            If you already uninstalled the game, make sure to follow step 4 and 5 to ensure there are no leftovers.
-                        </p>
-                    </div>
-
-                    <ol>
-                        <li>Open Steam and go to your <strong>Library</strong>.</li>
-                        <li>Find <strong>Oblivion</strong> in the list.</li>
-                        <li>Right-click on it and select <strong>Manage</strong> -> <strong>Uninstall</strong>.</li>
-                        <li>Navigate to <span class="card-basic">Steam\steamapps\common</span> and, if present, delete the <strong>Oblivion</strong> folder.</li>
-                        <li>Navigate to <span class="card-basic">Documents\My Games\Oblivion</span> and delete all INI files inside it.</li>
-                    </ol>
-                    </p>
-                </div>
-
-                <div class="card" id="SteamLibrary">
-                    <p>
-                    <h3>Creating a new Steam library</h3>
-
-                    <div class="card-yellow">
-                        <p>
-                            It is strongly recommended to install the games outside of any default Windows folders (such as <span class="card-basic">Program Files (x86)</span>), as the the strict Windows file protections of these folders can break certain mods/tools. Instead, we will use a tool called Steam Library Setup Tool to create a new Steam library folder outside of any default Windows folders.
-                            <br>
-                            <br>
-                            If you already have Steam installed outside of any default windows folders then go directly to step 1 of the next section and install the games to your custom Steam library.
-                        </p>
-                    </div>
-
-                    <ol>
-                        <li>Completely exit out of Steam using Task Manager or System Tray.</li>
-                        <li>Download the <strong>steam_library_setup_tool-3.2.exe</strong> file from <a href="https://github.com/LostDragonist/steam-library-setup-tool/releases" target="_blank">here</a>.</li>
-                        <li>Once downloaded, run the file and add a new entry by clicking <strong>Add Row</strong>.</li>
-                        <li>Type the chosen path under <strong>Path</strong>, e.g. <span class="card-basic">C:\Games\Steam</span></li>
-                        <li>Click <strong>Accept</strong> then <strong>Yes</strong> if prompted to create a new folder.</li>
-                        <li>The tool will ask to exit, select <strong>OK</strong>.</li>
-                        <div class="image-container width-90">
-                            <img class="content-img" src="./img/Others/Steam Library Tool Setup.webp" alt="Steam library setup tool">
-                            <div class="resize-overlay expand"></div>
-                        </div>
-                    </ol>
-                    </p>
-                </div>
-
-                <div class="card" id="Install">
-                    <p>
-                    <h3>Installing the Game</h3>
-
-                    <ol>
-                        <li>Open Steam and go to your <strong>Library</strong>.</li>
-                        <li>Find <strong>Oblivion</strong> in the list and select <strong>Install</strong>.</li>
-                        <li>Under <strong>Install to:</strong>, select the library folder created with the tool, which is the second <b>C:\</b> entry if you are installing on the main drive.</li>
-                        <div class="image-container width-90">
-                            <img class="content-img" src="./img/Others/Steam Location Pick.webp" alt="Example Steam install locations">
-                            <div class="resize-overlay expand"></div>
-                        </div>
-                        <li>Select <strong>Next</strong> then wait for the install to finish.</li>
-                    </ol>
-
-                    <div class="card-yellow">
-                        <p>
-                            If you still do not see your new library, restart your PC.
-                        </p>
-                    </div>
-
-                    </p>
-                </div>
-            </span>
-
-            <span id="PostInstallation" class="section">
-                <h2 onclick="location.href='#PostInstallation'">Post-Installation</h2>
-
-                <div class="card" id="Terminology">
-                    <p>
-                    <h3>Key Terminology</h3>
-                    Now that the game is installed, there are two folders from it that will be referred to in the guide often:
-                    <ul>
-                        <li><strong>Root</strong> folder: Where the game is installed.</li>
-                        <div class="card-basic">
-                            <p>Steam\steamapps\common\Oblivion</p>
-                        </div>
-                    </ul>
-
-                    <ul>
-                        <li><strong>Data</strong> folder: Where all of the game's assets are located.</li>
-                        <div class="card-basic">
-                            <p>Steam\steamapps\common\Oblivion\Data</p>
-                        </div>
-                    </ul>
-                    </p>
-                </div>
-
-                <div class="card" id="DisablingUpdates">
-                    <p>
-                    <h3>Disabling Automatic Steam Updates</h3>
-                    This will prevent Steam from automatically updating the game, which will break modding support considerably until they gain wide modding support (and the guide's).
-                    <ol>
-                        <li>In your Steam Library, <b>right-click</b> on Oblivion, and click on <strong>Properties</strong> in the resulting context menu.</li>
-                        <li>In the resulting new window, click on the drop-down at the top of the right pane underneath <strong>Automatic Updates</strong>.</li>
-                        <li>Set it to <b>"Only update this game when I launch it"</b>.</li>
-                    </ol>
-                    Since MO2 bypasses Steam's "play" button, the game will never automatically update because you will launch the game through MO2.
-                    </p>
-                </div>
-
-                <div class="card" id="GeneratingINIs" title="Generating INIs">
-                    <p>
-                    <h3>Generating Fresh INI Files</h3>
-                    <ol>
-                        <li>Run the game from Steam.</li>
-                        <li>Click OK to both pop-ups that say <b>Detecting Video Hardware</b>.</li>
-                        <ul>
-                            <li>If there aren't any pop-ups, navigate to <span class="card-basic">Documents\My Games\Oblivion</span> and delete all INI files, then retry.</li>
-                        </ul>
-                        <li>Click <b>OK</b> then <b>Exit</b>.</li>
-                    </ol>
-                    </p>
-                </div>
-
-                <!-- <div class="card-wj" id="WabbajackReturn" title="Return To The WJ Page">
-                    <p>
-                    <h3>Wabbajack Users!</h3>
-                    You are done with the Introduction and Setup of the guide, go back to the <a href="./wabbajack.html#Installation">Wabbajack page</a> to continue installing the list with it!
-                    </p>
-                </div> -->
             </span>
 
             <div class="navigationArrowContainer">
@@ -405,14 +259,6 @@
     </div>
 
     <footer>ModdingLinked 2025</footer>
-
-    <div id="image-overlay" class="overlay" hidden>
-        <div class="image-container">
-            <img id="enlarged-image" class="enlarged-image" src="" alt="Enlarged Image">
-            <div class="resize-overlay shrink"></div>
-        </div>
-    </div>
-
 </body>
 
 </html>
