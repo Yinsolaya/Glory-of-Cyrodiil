@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/Coco/Head Logo.webp">
 
-    <title>Mod Organizer 2 | Glory of Cyrodiil</title>
+    <title>Introduction | Glory of Cyrodiil</title>
 
     <meta name="keywords" content="
     Mod, Modding, Mods, Guide, Mod Guide, Modding Guide, Resource, Resources,
@@ -23,7 +23,7 @@
     Skyrim Special Edition, Skyrim SE, SSE,
     Oblivion, TES4">
 
-    <meta name="description" content="Installing and configuring Mod Organizer 2.">
+    <meta name="description" content="Preamble about the guide's goals and requirements.">
     <meta http-equiv='content-language' content='en-us'>
     <meta name="twitter:card" value="summary_large_image">
     <meta property="og:site_name" content="ModdingLinked">
@@ -31,7 +31,7 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://gloryofcyrodiil.moddinglinked.com">
     <meta property="og:image" content="https://gloryofcyrodiil.moddinglinked.com/img/Others/Card.webp">
-    <meta property="og:description" content="Installing and configuring Mod Organizer 2.">
+    <meta property="og:description" content="Preamble about the guide's goals and requirements.">
 
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#292c35">
     <meta name="darkreader-lock">
@@ -40,7 +40,6 @@
     <meta http-equiv='pragma' content='no-cache'>
     <meta http-equiv='clear-site-data' content='cache'>
 
-    <script src="js/imageViewer.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/javascript.js"></script>
     <script src="js/responsiveTitle.js"></script>
@@ -49,12 +48,14 @@
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/navigationArrows.css">
+    <link rel="stylesheet" href="css/coco.css">
     <link rel="stylesheet" href="css/progressBar.css">
     <link rel="stylesheet" href="css/guideColors.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="css/images.css">
 </head>
+
 
 <body class="theme">
     <div class="progress-container">
@@ -110,13 +111,9 @@
             </p>
             <hr>
             <p class="pageLinks">
+                </a>
+                <a href="./hud.html" title="User Interface">
                     User Interface
-                </a>
-                <a href="./animations.html" title="Animations">
-                    Animations
-                </a>
-                <a href="./tweaks.html" title="Tweaks">
-                    Tweaks
                 </a>
                 <a href="./gameplay.html" title="Gameplay">
                     Gameplay
@@ -184,299 +181,104 @@
         </div>
 
         <div class="content">
-
-            <span id="MO2" class="section">
-                <h2 onclick="location.href='#MO2'">Mod Organizer 2</h2>
-
-                <div class="card" id="WhatIsMO2" title="What is MO2?">
+            <span id="Introduction" class="section">
+                <div class="card-red center important-notice">
                     <p>
-                    <h3>What is Mod Organizer 2?</h3>
-                    Mod Organizer 2 (MO2) is an open source game mod manager, mainly used for Bethesda games. Its main features are:
+                        <img src="./img/Coco/Blockquote.webp" alt="Coco blockquote" class="cocoNerd">
+                    <div>
+                        <p>
+                            <b>IMPORTANT</b>:
+                            <br>
+                            Everything in this guide is written down for a reason! It is vital to read <b>everything!</b>
+                            <br>
+                            You can <b>NOT</b> skip any paragraphs/instructions and expect your game to function as it should.
+                        </p>
+                    </div>
+                    </p>
+                </div>
+
+                <h2 onclick="location.href='#Introduction'">Introduction</h2>
+                <div class="card flex logo-container" id="Overview">
+                    <div>
+                        <p>
+                        <h3>Overview</h3>
+                        Glory of Cyrodiil is a modding guide for Oblivion that will carefully walk you through how to install all the mods you will need for a perfectly stable, smooth and enjoyable experience. <br>
+                        <br>
+                        The guide is highly accessible for everyone, no matter your modding experience.
+                        It is still incredibly important that you read all the instructions very carefully, even if you believe you are experienced enough to skip them. There are many small instructions that are vital for your game to function, and could be easily missed if you aren't careful.
+                        Although you don't need any modding experience to use this guide, it is expected for you to be relatively experienced with operating a computer in general.
+                        </p>
+                    </div>
+
+                    <div>
+                        <img src="img/Coco/Full.webp" alt="Logo of Coco - a dog mascot of ModdingLinked">
+                    </div>
+                </div>
+
+                <div class="card" id="Features">
+                    <p>
+                    <h3 onclick="location.href='#Features'">Features</h3>
                     <ul>
                         <li>
-                            <strong>Virtual Filesystem (USVFS)</strong>: MO2 does not install mods directly into the game's folder, but rather creates a virtual filesystem that the game reads from. This allows for:
-                            <ul>
-                                <li>Safe mod installation and uninstallation,</li>
-                                <li>Being able to modify mod install order at any point,</li>
-                                <li>Having multiple profiles with different mod setups,</li>
-                                <li>Keeping original game files clean.</li>
-                            </ul>
-                            The <b>downsides</b> to USVFS are:
-                            <ul>
-                                <li>Mods installed through MO2 are "visible" only to programs launched using MO2,</li>
-                                <li>Some programs may not work properly with MO2's virtual filesystem,</li>
-                                <li>USVFS can cause performance overhead if you have tons of loose (not-BSA/BA2) files,</li>
-                                <li>USVFS works by "hooking" into the game (similarly to mods such as NVSE plugins, ReShade, etc.). This method can be considered as unsafe by some antivirus software due to its memory-invasive nature.</li>
-                            </ul>
+                            <b>Stability</b>: The guide includes all essential stability enhancements and no placebo/dangerous mods.
                         </li>
                         <li>
-                            <strong>Profile System</strong>: MO2 allows you to create multiple profiles with different mod setups, saves, and settings.
+                            <b>Performance</b>: Every tool, setting and mod in the guide has been carefully selected and play-tested to ensure maximum possible performance.
                         </li>
                         <li>
-                            <strong>Two pane interface</strong>: MO2 is split into two sides, the left side is the modlist and the right side is the plugin list. This allows for easy conflict resolution and mod management.
+                            <b>Customizability</b>: The guide is split into <b>2 sections</b>; all the mods required for the game to work and perform better are contained in the first section. The mods that can be considered subjective and that alter or add game content are in the <strong>GOC Extended</strong> section.
                         </li>
                         <li>
-                            <strong>Portability</strong>: Thanks to the use of USVFS, MO2 has a "portable" mode that allows you to move the entire MO2 folder to another location with minimal setup.
-                        </li>
-                        <li>
-                            <strong>Modding Community Integration</strong>: MO2 has built-in support for Nexus Mods, allowing you to download mods directly from the Nexus.
-                            <br>
-                            It also has a plugin system that allows for creation of custom plugins to extend its functionality.
-
-                            <div class="card-yellow">
-                                <p>
-                                    Mod Organizer 2 has <b>NO</b> support for Nexus' Collections feature, so you will have to download mods one by one.
-                                    <br>
-                                    This is not a big issue, as the guide will provide direct links to the mods you need, and most collections are low quality and not curated.
-                                    <hr>
-                                    The closest alternative to Collections is <a href="https://www.wabbajack.org/">Wabbajack</a>, which is a community-made modlist installer that can install entire modlists with a single click. Due to its higher bar of entry for modlist creators, Wabbajack lists tend to be of higher quality compared to Collections.
-                                    <!-- <br>
-                                    <br>
-                                    You can find all instructions on how to install the official Glory of Cyrodiil Wabbajack list <a href="./wabbajack.html" target="_blank">here</a>. -->
-                                </p>
-                            </div>
-
+                            <b>Better Gameplay</b>: As part of the <b>DBF Extended</b> section, the guide includes many mods that greatly improve the gameplay without drastically overhauling the core experience or straying away from the game's original intent.
                         </li>
                     </ul>
                     </p>
                 </div>
 
-                <div class="card" id="WhyMO2" title="Why MO2?">
+                <div class="card" id="Requirements">
                     <p>
-                    <h3>Why Mod Organizer 2?</h3>
-                    Mod Organizer 2 has been chosen for our guides due to its <strong>ease of use</strong> and its ability to keep the <strong>game's folder clean</strong>. This is important because it allows for easy conflict resolution and mod management, and makes correcting mistakes trivial - installed mods in the wrong order? Just drag them into the correct position!
-                    <br>
-                    <br>
-                    Compared to Vortex, MO2 doesn't hide the most important parts of modding from the user, making it easier to understand what is happening and why, albeit at the cost of potentially looking scary at first.
-                    <br>
-                    <br>
-                    That said, we are well aware that MO2 is not perfect, and it has its own set of issues and limitations, but it is the best tool for the job.
-                    </p>
-                </div>
-            </span>
-
-            <span id="Installation" class="section">
-                <h2 onclick="location.href='#Installation'">Installation</h2>
-
-                <div class="card" id="InstallingMO2" title="Installing MO2">
-                    <p>
-                    <h3>Installing Mod Organizer 2</h3>
-                    <ol>
-                        <li><strong>Download Mod Organizer 2</strong> from <a href="https://www.nexusmods.com/site/mods/874" target="_blank">here</a>.</li>
-                        <li>Once the download has finished, run the installer.</li>
-                        <li>Accept the license, click <b>Next</b>.</li>
-                        <li>
-                            When asked about the install location, change <span class="card-basic">MO2</span> to <span class="card-basic">Glory of Cyrodiil</span> and click <b>Next</b>.
-                            <br>
-                            <div class="image-container width-40">
-                                <img class="content-img" src="img/MO2/Install Path.webp" alt="Change folder name to Glory of Cyrodiil">
-                                <div class="resize-overlay expand"></div>
-                            </div>
-
-                            <div class="card-yellow">
-                                <p>
-                                    If you wish to install Mod Organizer 2 in a different location, you can do so by clicking the <b>Browse</b> button and selecting a different folder.
-                                    <br>
-                                    <br>
-                                    The folder <u>MUST</u> be outside of the default Windows folders (such as <span class="card-basic">Program Files x86</span>) and outside of the game's <b>Root</b> folder.
-                                    <br>
-                                    <br>
-                                    It's discouraged to store MO2 on Desktop or Documents if you use OneDrive or similar cloud providers, due to potential issues and degraded performance.
-                                </p>
-                            </div>
-
-                        </li>
-                        <li>On the install components page, use defaults.</li>
-                        <li>
-                            When asked about the Start Menu folder, change <span class="card-basic">Mod Organizer</span> to <span class="card-basic">Glory of Cyrodiil</span> and click <b>Next</b>.
-                            <br>
-                            <div class="image-container width-40">
-                                <img class="content-img" src="img/MO2/Start Menu.webp" alt="Change the name to Glory of Cyrodiil">
-                                <div class="resize-overlay expand"></div>
-                            </div>
-                        </li>
-                        <li>Don't create a Desktop shortcut - we will create our own later.</li>
-                        <li>On the final page, click <b>Install</b>.</li>
-                        <li>Once the installation is complete, ensure that <strong>Launch Mod Organizer</strong> is ticked and click <b>Finish</b>.</li>
-                    </ol>
-
-                    <div class="card-red">
-                        <p>
-                            MO2 refuses to open? Try <a href="./faq.html#troubleshootingquestion10">these steps</a> in the FAQ.
-                        </p>
-                    </div>
-
-                    </p>
-                </div>
-            </span>
-
-            <span id="Setup" class="section">
-                <h2 onclick="location.href='#Setup'">Setup</h2>
-
-                <div class="card" id="Configuration">
-                    <p>
-                    <h3>Configuring Mod Organizer 2</h3>
-                    <ol>
-                        <li>On the instance creation page, select <strong>Create a portable instance</strong>, click <b>Next</b>.</li>
-                        <div class="image-container width-40">
-                            <img class="content-img" src="./img/MO2/Instance.webp" alt="Select Portable Instance option">
-                            <div class="resize-overlay expand"></div>
-                        </div>
-                        <li>Select <strong>Oblivion</strong> and click <b>Next</b>.</li>
-                        <li>Select the store where you bought the game, click <b>Next</b>.</li>
-                        <li>When asked about profile settings, <strong>enable all options</strong> and click <b>Next</b>.</li>
-                        <li>Keep the <strong>default location</strong> file path.</li>
-                        <li>Click <strong>Connect to Nexus</strong>.</li>
-                    </ol>
-
-                    <div class="card-yellow">
-                        <p>
-                            If you have MO2 installed on an SSD or a HDD with little space, you can check the <strong>Show advanced options</strong> box and change the <strong>Downloads</strong> file path to a different drive with more space.
-                            <br>
-                            This will not affect the game's performance, the downloaded files can be deleted after the mods have been installed.
-                        </p>
-                    </div>
-
-                    <ol start="7">
-                        <li>On the last page, select <b>Finish</b>.</li>
-                        <li>If you see a pop-up called <strong>Show tutorial?</strong>, select <b>No</b>.</li>
-                        <li>If you see a pop-up called <strong>Register?</strong>, select <b>Yes</b>.</li>
-                        <li>If you see a pop-up called <strong>INI file is read-only</strong>, select <b>Remember my choice</b> from the drop-down at the bottom then click <b>Clear the read-only flag</b>.</li>
-                    </ol>
-                    </p>
-                </div>
-
-                <div class="card" id="MO2Settings" title="MO2 Settings">
-                    <p>
-                    <h3>Configuring Settings</h3>
-                    <ol>
-                        <li>Click the <b>X</b> in the bottom right of MO2 to close the log window.</li>
-                        <li>Click the <img class="mo2-icon" src="./img/MO2/Settings.webp" alt="MO2 settings"> button at the top of MO2 to open the settings.</li>
-                        <li>If you wish, you can select a different theme.</li>
-                        <li>In the <b>Nexus</b> tab, select <strong>Connect to Nexus</strong>.</li>
-                        <div class="image-container">
-                            <img class="content-img" src="./img/MO2/Connect.webp" alt="Connect to Nexus">
-                            <div class="resize-overlay expand"></div>
-                        </div>
-                    </ol>
-
-                    <div class="card-yellow">
-                        <p>
-                            This option will not show up if you have already connected your Nexus account on a different MO2 instance.
-                        </p>
-                    </div>
-
-                    <ol start="5">
-                        <li>MO2 will open your browser and prompt you to <strong>authorize</strong> the connection.</li>
-                        <li>Once you authorize it, you can close your browser and of the MO2 settings.</li>
-                        <li>Allow MO2 to <strong>restart</strong>.</li>
-                    </ol>
-                    </p>
-                </div>
-                <div class="card" id="GameSettings">
-                    <p>
-                    <h3>Game Settings</h3>
-                    In this step, we will download and run Bethini Pie, which will allow choosing optimized presets and more specific options all through an easy to use interface.
-                    <ol>
-                        <li>Download <a href="https://www.nexusmods.com/site/mods/631" target="_blank">Bethini Pie</a>.</li>
-                        <li>Extract the archive anywhere outside of the default Windows folders, such as <span class="card-basic">C:\Modding Tools</span>.</li>
-                        <li>In MO2, click on the <strong>drop-down</strong> in the right pane next to the <b>Run</b> button.</li>
-                        <li>Click <b>&#60;Edit...&#62;</b>, then click the <b>+</b> symbol in the top left and <strong>Add from file</strong>.</li>
-                        <li>In the resulting explorer window, navigate to where you installed Bethini Pie and select <strong>Bethini.exe</strong>.</li>
-                        <li>Press <strong>Apply</strong> in the lower right, then <b>OK</b>.</li>
-                        <li>Select <b>Bethini</b> from the drop-down and <strong>run</strong> it.</li>
-                        <li>Click <b>Oblivion</b> then press <strong>Select Game</strong>.</li>
-                        <li>If you get a <b>Setup</b> prompt press <strong>OK</strong>. You don't need to redirect the INI path to MO2's profile folder because MO2's VFS already handles the redirection.</li>
-                    </ol>
-
-                    <div class="card-yellow">
-                        <p>
-                            <strong>GOG users will need to correct the paths</strong>, as they default to Steam ones.
-                        </p>
-                    </div>
-
-                    <ol start="10">
-                        <li>Apply the following settings:</li>
-                        <ol>
-                            <li>Select a Bethini <strong>preset</strong> depending on your hardware.</li>
-                        </ol>
-
-                        <div class="card-yellow">
-                            <p>
-                                The Bethini High preset is recommended for most systems, use Ultra if you have spare GPU performance and want better visual quality.
-                            </p>
-                        </div>
-
-                        <ol start="2">
-                            <li>Apply <strong>Recommended Tweaks</strong>.</li>
-                            <li>Set <b>Display Mode</b> to <strong>Borderless Windowed</strong>.</li>
-                            <li>Select the <strong>resolution</strong> you want to display the game in.</li>
-                            <li>Make sure <b>Text Language</b> is set to <strong>English</strong> both in Bethini Pie and on Steam (other languages are not supported by the guide).</li>
-                            <li>Enable <strong>Freebies Seen</strong>.</li>
-                            <li>Edit the other settings to your liking.</li>
-                            <li>Click <b>File</b> then <strong>Save</strong> in the top left, then confirm the prompts and close Bethini.</li>
-                        </ol>
-
-                        <div class="card-yellow">
-                            <p>
-                                Freebies Seen is the the setting that gets set to 1 by the game after you go through the AE DLC's prompts for download. The guide doesn't support this DLC, so we set it to 1 manually to prevent that prompt.
-
-                                <br>
-                                <br>
-
-                                Alternatively, you can just back out of the login screen and it will be set to 1 automatically.
-                            </p>
-                        </div>
-                    </ol>
-                    </p>
-                </div>
-            </span>
-
-            <span id="Instructions" class="section">
-                <h2 onclick="location.href='#Instructions'">Mod Installation Instructions</h2>
-
-                <div class="card" id="HowToUse?">
-                    <p>
-                    <h3>How to use Nexus and MO2?</h3>
-                    When the guide says to install a mod, it will be formatted as <strong>Main File - Example 1.5</strong>, this is referring to the mod's category on Nexus and file name.
-
-                    <div class="card-yellow" style="display: flex; align-items: center;">
-                        <div>
-                            <p>
-                                <b>IMPORTANT</b>:
-                                <br>
-                                Unless otherwise specified, you will always use <b>Mod Manager Download</b>.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="image-container">
-                        <img class="content-img" src="./img/Others/Download Example.webp" alt="Download example">
-                        <div class="resize-overlay expand"></div>
-                    </div>
-                    <br>
-                    <br>
-                    <strong>Standard procedure</strong> through the manager:
-                    <ol>
-                        <li>Download the indicated file(s).</li>
-                        <li>Open the <b>Downloads</b> tab in MO2 (below the executable selector on the right).</li>
-                        <li>Double-click on the mod to install it.</li>
-                        <li>Enable the mod on the left pane by ticking its checkbox.</li>
-                    </ol>
-                    <br>
-                    If downloading through the manager is not an option, do the following:
-                    <ol>
-                        <li>Click the <strong>Manual Download</strong> button (or whatever the download button is for the respective site).</li>
-                        <li>Once the download has finished, click the <img class="mo2-icon" src="./img/MO2/Install Archive.webp" alt="MO2 archive button"> button at the top of MO2.</li>
-                        <li>From the new window, navigate to where the file was downloaded to and double-click it.</li>
-                        <li>Finish the install as you would with a <b>Mod Manager Download</b> mod.</li>
-                    </ol>
-                    <br>
-                    When <strong>installing a mod</strong>, MO2 might prompt you with multiple choices:
+                    <h3 onclick="location.href='#Requirements'">Requirements</h3>
                     <ul>
-                        <li><strong>Rename</strong> appears when you are trying to install a file with the same name as an existing one. If you are installing, for example, a secondary file necessary for the mod to work, then rename it accordingly with the name drop-down list or by typing the name manually.</li>
-                        <li>If you are updating from an old version of a mod, you should select <strong>Replace</strong>, this will automatically delete all the files from the old version of the mod and replace them with the ones from the new version.</li>
-                        <li><strong>Merge</strong> should only be used when you are sure the mod will not be updated and in situations where a hotfix is uploaded as separate file. Avoid it if you can, for maximum modularity.</li>
+                        <li>An <b>English</b> copy of the game from <a href="https://store.steampowered.com/agecheck/app/489830/" target="_blank">Steam</a> or <a href="https://www.gog.com/en/game/the_elder_scrolls_v_skyrim_special_edition" target="_blank">GOG</a>.
+                            <ul>
+                                <li>Only the <strong>English version</strong> of the game is supported for maximum compatibility; translations can conflict with mods and cause issues. The Epic Games Store and Xbox Game Pass versions of the game are also unsupported, as they do not work with xOBSE, which is essential for many mods.</li>
+                            </ul>
+                        </li>
+
+                        <div class="card-green">
+                            <p>
+                                You can buy a cheap activation key for the normal version on <a href="https://www.instant-gaming.com/en/1512-buy-the-elder-scrolls-v-skyrim-special-edition-special-edition-pc-game-steam/?igr=moddinglinked" target="_blank">Instant Gaming</a> (affiliate link), or <a href=
+                            </p>
+                        </div>
+
+                        <li>At least 5GB of free drive space, game included (2GB if you delete all the downloads).</li>
+                        <li>Windows 10 or higher (64-bit).</li>
+
+                        <div class="card-red">
+                            <p>
+                                Windows installations deviating from the public release (e.g. <strong>customized or LTSC</strong>) are not supported by us. We can refuse to provide help in such cases.
+                                <br>
+                                This is because they don't guarantee the default functionality expected from the public release, which can cause <strong>unforeseen issues</strong>.
+                            </p>
+                        </div>
+
+                        <li>A text editor (<a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a> is recommended, but the default Windows notepad will work).</li>
+                        <li>An archiving tool (<a href="https://apps.microsoft.com/store/detail/nanazip/9N8G7TSCL18R?hl=en-us&gl=us" target="_blank">NanaZip</a> is recommended).</li>
+                        <li>The latest GPU drivers (either <a href="https://www.nvidia.com/Download/index.aspx" target="_blank">Nvidia</a>, <a href="https://www.amd.com/en/support" target="_blank">AMD</a> or <a href="https://www.intel.com/content/www/us/en/search.html#q=&sort=relevancy&f:@tabfilter=[Downloads]&f:@stm_10385_en=[Graphics]" target="_blank">Intel</a>).</li>
+                        <li>A <a href="https://users.nexusmods.com/register" target="_blank">Nexus Mods</a> account (a Premium subscription will allow uncapped speeds).</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="card" id="RecommendedSpecs">
+                    <p>
+                    <h3 onclick="location.href='#RecommendedSpecs'">Recommended Specs</h3>
+                    Here are the recommended minimum specifications to run GOC+GOCE at <strong>60 FPS 1080p</strong> with all the recommended mods and settings:
+                    <ul>
+                        <li><b>CPU</b>: Matching or surpassing the single-thread performance of a Ryzen 5 1600.</li>
+                        <li><b>RAM</b>: 3 billion TB or more.</li>
+                        <li><b>GPU</b>: Matching or surpassing the performance of a GTX 1060 or RX 480. 4GB or more of VRAM.</li>
+                        <li><b>Storage</b>: Solid state (SSD).</li>
                     </ul>
                     </p>
                 </div>
@@ -502,13 +304,6 @@
     </div>
 
     <footer>ModdingLinked 2025</footer>
-
-    <div id="image-overlay" class="overlay" hidden>
-        <div class="image-container">
-            <img id="enlarged-image" class="enlarged-image" src="" alt="Enlarged Image">
-            <div class="resize-overlay shrink"></div>
-        </div>
-    </div>
 </body>
 
 </html>
