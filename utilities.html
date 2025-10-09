@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/Coco/Head Logo.webp">
 
-    <title>Bug Fixes | Glory of Cyrodiil</title>
+    <title>Utilities | Glory of Cyrodiil</title>
 
     <meta name="keywords" content="
     Mod, Modding, Mods, Guide, Mod Guide, Modding Guide, Resource, Resources,
@@ -23,7 +23,7 @@
     Skyrim Special Edition, Skyrim SE, SSE,
     Oblivion, TES4">
 
-    <meta name="description" content="Essential mods that fix bugs, improve performance and add quality of life features.">
+    <meta name="description" content="Essential stability and performance mods, required for any modded setup.">
     <meta http-equiv='content-language' content='en-us'>
     <meta name="twitter:card" value="summary_large_image">
     <meta property="og:site_name" content="ModdingLinked">
@@ -31,7 +31,7 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://gloryofcyrodiil.moddinglinked.com">
     <meta property="og:image" content="https://gloryofcyrodiil.moddinglinked.com/img/Others/Card.webp">
-    <meta property="og:description" content="Essential mods that fix bugs, improve performance and add quality of life features.">
+    <meta property="og:description" content="Essential stability and performance mods, required for any modded setup.">
 
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#292c35">
     <meta name="darkreader-lock">
@@ -40,9 +40,11 @@
     <meta http-equiv='pragma' content='no-cache'>
     <meta http-equiv='clear-site-data' content='cache'>
 
+    <script src="js/imageViewer.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/javascript.js"></script>
     <script src="js/responsiveTitle.js"></script>
+    <script src="js/fpsCalculator.js"></script>
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/cards.css">
@@ -190,76 +192,172 @@
 
         <div class="content">
 
-            <span id="BugFixes" class="section">
-                <h2 onclick="location.href='#BugFixes'">Bug Fixes</h2>
+            <div class="card-yellow center" style="margin-top: 30px;">
+                <p>
+                    <b>IMPORTANT</b>:
+                    <br>
+                    If you run into any issues at any point in the guide, please be sure to check the <a href="./faq.html" target="_blank">FAQ</a>.
+                    <br>
+                    If your issue is not addressed there, join the <a href="https://discord.gg/S99Ary5eba" target="_blank">Discord</a> for support.
+                </p>
+            </div>
+
+            <span id="ManualDownloads" class="section">
+                <h2 onclick="location.href='#ManualDownloads'">Manual Downloads</h2>
+
+                <div class="card">
+                    <p>
+                    <h3>Root Mods</h3>
+                    The following mods, unlike most others, need to be installed directly into the game's <b>Root</b> folder, <strong>not through Mod Organizer 2</strong>.
+                    <br>
+                    <br>
+                    Use the <strong>Manual Download</strong> and follow the instructions provided for each mod.
+                    </p>
+                </div>
+
+                <div class="card" id="Patchers">
+                    <p>
+                    <h3 class="link-download"><a href="https://www.nexusmods.com/oblivion/mods/37952" target="_blank">Oblivion Script Extender (OBSE xOBSE)</a></h3>
+                    Extends the scripting capabilities of the game.
+                    <br>
+                    <br>
+                    Follow the instructions based on your game version.
+                    <div class="flex" style="flex-direction: row; align-content: center; justify-content: center;">
+                        <div class="flex" style="flex-direction: column; width: 50%; margin-right: 0.5em;">
+                            <div class="expander-top clickable" onclick="expandCard(this, xobseSteamExpander)" id="xobseSteam">
+                                <div>
+                                    <p>
+                                    <h3>Steam</h3>
+                                    </p>
+                                </div>
+                                <img class="chevron" style="transform: rotateX(0deg);" src="img/UI/Chevron Down.svg" alt="UI element - Chevron">
+                            </div>
+                            <div class="expander-bottom" id="xobseSteamExpander">
+                                <p>
+                                <ul>
+                                    <li><b>Main Files</b> - Oblivion Script Extender (OBSE xOBSE)</li>
+                                    <ol>
+                                        <li>Open the downloaded archive and <strong>move everything</strong> to the game's <b>Root</b> folder.</li>
+                                    </ol>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex" style="flex-direction: column; width: 50%; margin-left: 0.5em;">
+                            <div class="expander-top clickable" onclick="expandCard(this, xobseGogExpander)" id="xobseGog">
+                                <p>
+                                <h3>GOG</h3>
+                                <img class="chevron" style="transform: rotateX(0deg);" src="img/UI/Chevron Down.svg" alt="UI element - Chevron">
+                                </p>
+                            </div>
+                            <div class="expander-bottom" id="xobseGogExpander">
+                                <p>
+                                <ul>
+                                    <li><b>Main Files</b> - Oblivion Script Extender (OBSE xOBSE) GOG</li>
+                                    <ol>
+                                        <li>Open the downloaded archive and <strong>move everything</strong> to the game's <b>Root</b> folder.</li>
+                                    </ol>
+                                </ul>
+                                </p>
+
+                                <div
+                                    <p>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="card-yellow center">
+                        <p>
+                            If you do not know what the <b>Root</b> folder is, read the <a href="./setup.html#Terminology" target="_blank">Key Terminology</a>.</p>
+                    </div>
+
+                    <div style="text-align: center;">
+                        After proper install, your <b>Root</b> folder should look like this:
+                        <br>
+                        <div class="image-container width-40" style="margin: 0 auto;">
+                            <img class="content-img" src="./img/Others/Root Folder.webp" alt="Root folder with a correct xOBSE install">
+                            <div class="resize-overlay expand"></div>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <p>
+                    <h3>Making MO2 Detect xOBSE</h3>
+                    <ol>
+                        <li>
+                            Once OBSE is installed as instructed above, <strong>restart MO2</strong> and then in the top right drop-down, select <strong>Oblivion.exe</strong>:
+                            <br>
+                            <div class="image-container width-60">
+                                <img class="content-img" src="./img/Others/Start xOBSE.webp" alt="Launching xOBSE">
+                                <div class="resize-overlay expand"></div>
+                            </div>
+                        </li>
+                    </ol>
+                    </p>
+                </div>
+            </span>
+
+            <span id="MO2Downloads" class="section">
+                <h2 onclick="location.href='#MO2Downloads'">Mod Organizer Downloads</h2>
+
+                <div class="card">
+                    <p>
+                    <h3>Managed</h3>
+                    From now on, select <strong>Mod Manager Download</strong> to download mods - this will make the file appear in MO2's <b>Downloads</b> tab, ready to be installed according to the <a href="./mo2.html#Instructions" target="_blank">instructions</a> earlier in the guide.
+                    </p>
+                </div>
 
                 <div class="card">
                     <p>
                     <h3>Creating a Separator in MO2</h3>
                     <ol>
                         <li>Right-click the empty space in the left pane of MO2 and select <strong>Create separator</strong>.</li>
-                        <li>Name the separator <strong>Bug Fixes</strong>.</li>
+                        <li>Name the separator <strong>Utilities</strong>.</li>
                     </ol>
                     </p>
                 </div>
 
-                <div class="card" id="UOP" title="UOP">
+                <div class="card" id="BSA Decompressor">
                     <p>
-                    <h3 class="link-download"><a href="https://www.nexusmods.com/oblivion/mods/5296" target="_blank">Unofficial Oblivion Patch - UOP</a></h3>
-                    An Oblivion mod that fixes over 2,500 bugs (and 70,000 object placement errors.)
-
+                    <h3 class="link-download"><a href="https://www.nexusmods.com/oblivion/mods/49652" target="_blank">Oblivion BSA Decompressor</a></h3>
+                    Decompresses the vanilla BSA files to reduce loading times and stuttering. Can also fix certain sound effects not playing.
                     <h3 class="install">Installation instructions</h3>
                     <ul>
-                        <li><b>Main Files</b> - Unofficial Oblivion Patch</li>
-                </div>
-
-               <div class="card" id="USIP" title="USIP">
-                    <p>
-                    <h3 class="link-download"><a href="https://www.nexusmods.com/oblivion/mods/10739" target="_blank">Unofficial Shivering Isles Patch - USIP</a></h3>
-                    Fixes a vast amount of bugs currently existing in the Shivering Isles expansion pack.
-
-                    <h3 class="install">Installation instructions</h3>
-                    <ul>
-                        <li><b>Main Files</b> - Unofficial Shivering Isles Patch</li>
-                </div>
-            
-               <div class="card" id="UODP" title="UODP">
-                    <p>
-                    <h3 class="link-download"><a href="https://www.nexusmods.com/oblivion/mods/9969" target="_blank">Unofficial Oblivion DLC Patches - UODP</a></h3>
-                    Fixes several bugs in the DLCs.
-
-                    <h3 class="install">Installation instructions</h3>
-                    <ul>
-                        <li><b>Main Files</b> - Unofficial Oblivion DLC Patches</li>
+                        <li>
+                            <b>Main Files</b> - Oblivion BSA Decompressor
+                            <ol>
+                                <li>Extract the archive and run <span class="card-basic">Oblivion BSA Decompressor.exe</span>.</li>
+                                <li>The <strong>Oblivion</strong> and <strong>Decompressed Archives</strong> paths should be filled by default (Root folder and Data folder respectively). If they aren't, close the program and re-run your game launcher to generate the required registry key.</li>
+                                <div>
+                                    <p>
+                                <li>Click <strong>Decompress</strong>, wait for the process the finish, then exit the program once finished.</li>
+                            </ol>
+                        </li>
+                    </ul>
+                    </p>
                 </div>
                 
-               <div class="card" id="EBF" title="EBF">
-                    <p>
-                    <h3 class="link-download"><a href="https://www.nexusmods.com/oblivion/mods/47085" target="_blank">Engine Bug Fixes</a></h3>
-                    Fixes several engine bugs.
-
-                    <h3 class="install">Installation instructions</h3>
-                    <ul>
-                        <li><b>Main Files</b> - Engine Bug Fixes</li>
                 </div>
-               <div class="card" id="BEF" title="BEF">
-                    <p>
-                    <h3 class="link-download"><a href="https://www.nexusmods.com/oblivion/mods/52700" target="_blank">Blue's Engine Fixes</a></h3>
-                    Fixes a critical engine bug that resulted in memory corruption and crashes.
 
+                <div class="card" id="BSA Decompressor">
+                    <p>
+                    <h3 class="link-download"><a href="https://www.nexusmods.com/oblivion/mods/49652" target="_blank">Oblivion BSA Decompressor</a></h3>
+                    Decompresses the vanilla BSA files to reduce loading times and stuttering. Can also fix certain sound effects not playing.
                     <h3 class="install">Installation instructions</h3>
                     <ul>
-                        <li><b>Main Files</b> - BA_EngineFixes.zip</li>
-                </div>
-               </div>
-               <div class="card" id="ASEF" title="ASEF">
-                    <p>
-                    <h3 class="link-download"><a href="https://www.nexusmods.com/oblivion/mods/53911" target="_blank">AveSithis Engine Fixes</a></h3>
-                    Corrects some more bugs in the game engine.
-
-                    <h3 class="install">Installation instructions</h3>
-                    <ul>
-                        <li><b>Main Files</b> - Ave Sithis Engine Fixes</li>
+                        <li>
+                            <b>Main Files</b> - Oblivion BSA Decompressor
+                            </ol>
+                        </li>
+                    </ul>
+                    </p>
                 </div>
             </span>
 
@@ -283,6 +381,14 @@
     </div>
 
     <footer>ModdingLinked 2025</footer>
+
+    <div id="image-overlay" class="overlay" hidden>
+        <div class="image-container">
+            <img id="enlarged-image" class="enlarged-image" src="" alt="Enlarged Image">
+            <div class="resize-overlay shrink"></div>
+        </div>
+    </div>
+
 </body>
 
-</html>{
+</html>
