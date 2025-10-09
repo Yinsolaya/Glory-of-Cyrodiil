@@ -1,4 +1,4 @@
-# [Glory of Cyrodiil](https://gloryofcyrodiil.moddinglinked.com/)
+# [Glory of Cyrodiil](https://username.github.io/Glory-of-Cyrodiil/)
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-informational.svg)](https://github.com/h5bp/html5-boilerplate/blob/master/LICENSE.txt)
 
